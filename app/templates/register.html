@@ -9,9 +9,16 @@
     <input type="text" name="username" required>
     <label>Password:</label>
     <input type="password" name="password" required>
+    <label>Role:</label>
+    <select name="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
     <button type="submit">Register</button>
 </form>
 <p>Already have an account? <a href="{{ url_for('main.index') }}">Login here</a></p>
 {% endblock %}
+
+
 
 

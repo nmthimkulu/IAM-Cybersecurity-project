@@ -7,6 +7,9 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object('instance.config')
 
+    # Needed for sessions
+    app.secret_key = "replace-with-a-secure-random-key"
+
     db.init_app(app)
 
     from .routes import bp
@@ -16,3 +19,5 @@ def create_app():
         db.create_all()
 
     return app
+
+

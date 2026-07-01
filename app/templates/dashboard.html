@@ -3,10 +3,12 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<h2>Welcome to the Dashboard</h2>
-<p>You are logged in successfully.</p>
-<a href="{{ url_for('main.index') }}">Logout</a>
+<h2>Welcome, {{ username }}!</h2>
+<p>You are logged in as a regular user.</p>
+<a href="{{ url_for('main.logout') }}">Logout</a>
 {% endblock %}
+
+
 
 
 
